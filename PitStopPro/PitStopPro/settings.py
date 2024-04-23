@@ -27,12 +27,12 @@ SECRET_KEY = "django-insecure-z$t&)5_xv&5u58igz6%h7ghkcz3r18e7$)i=*2!5r#7er+m&9a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [‘https://*.railway.app’, '127.0.0.1']
+ALLOWED_HOSTS = ['capstonedeployrebuild-production.up.railway.app', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = [‘https://*.railway.app’]
+CSRF_TRUSTED_ORIGINS = ['capstonedeployrebuild-production.up.railway.app']
 
 CORS_ALLOWED_ORIGINS = [
-    'https://*.railway.app'
+    'capstonedeployrebuild-production.up.railway.app'
 ]
 
 
@@ -67,14 +67,14 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-    "corsheaders.middleware.CorsMiddleware"
+    "whitenoise.middleware.WhiteNoiseMiddleware"
 ]
 INTERNAL_IPS = [
     '127.0.0.1',
