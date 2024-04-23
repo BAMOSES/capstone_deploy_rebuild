@@ -10,7 +10,7 @@ charset-normalizer==3.3.2
 contourpy==1.2.1
 cycler==0.12.1
 dj-database-url==2.1.0
-Django==4.2.11
+Django==3.2.17
 django-debug-toolbar==4.3.0
 django-mathfilters==1.0.0
 exceptiongroup==1.2.1
