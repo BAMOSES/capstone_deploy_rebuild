@@ -25,7 +25,7 @@ TWILIO_PHONE_NUMBER=os.environ.get('+18334091034')
 SECRET_KEY = "django-insecure-z$t&)5_xv&5u58igz6%h7ghkcz3r18e7$)i=*2!5r#7er+m&9a"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['capstonedeployrebuild-production.up.railway.app', '127.0.0.1']
 
