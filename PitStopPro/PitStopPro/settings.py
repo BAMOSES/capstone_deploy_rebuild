@@ -27,12 +27,12 @@ SECRET_KEY = "django-insecure-z$t&)5_xv&5u58igz6%h7ghkcz3r18e7$)i=*2!5r#7er+m&9a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['capstonedeployrebuild-production.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['https://capstonedeployrebuild-production.up.railway.app/', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['capstonedeployrebuild-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://capstonedeployrebuild-production.up.railway.app/']
 
 CORS_ALLOWED_ORIGINS = [
-    'capstonedeployrebuild-production.up.railway.app'
+    'https://capstonedeployrebuild-production.up.railway.app/'
 ]
 
 
