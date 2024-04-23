@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,12 +27,12 @@ SECRET_KEY = "django-insecure-z$t&)5_xv&5u58igz6%h7ghkcz3r18e7$)i=*2!5r#7er+m&9a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://capstonedeployrebuild-production.up.railway.app/', '127.0.0.1']
+ALLOWED_HOSTS = ['https://capstonedeployrebuild-production.up.railway.app', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['https://capstonedeployrebuild-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://capstonedeployrebuild-production.up.railway.app']
 
 CORS_ALLOWED_ORIGINS = [
-    'https://capstonedeployrebuild-production.up.railway.app/'
+    'https://capstonedeployrebuild-production.up.railway.app'
 ]
 
 
@@ -111,12 +110,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-if 'DATABASE_URL' in os.environ:
-    DATABASES['default'] = dj_database_url.config(
-        conn_max_age=500,
-        conn_health_checks=True,
-    )
 
 
 # Password validation
