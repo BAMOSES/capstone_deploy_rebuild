@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [‘https://*.railway.app’, '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = [‘https://*.railway.app’]
 
 CORS_ALLOWED_ORIGINS = [
-    '‘https://*.railway.app’'
+    'https://*.railway.app'
 ]
 
 
