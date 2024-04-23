@@ -27,9 +27,13 @@ SECRET_KEY = "django-insecure-z$t&)5_xv&5u58igz6%h7ghkcz3r18e7$)i=*2!5r#7er+m&9a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['capstonedeployrebuild-production.up.railway.app', 'http://127.0.0.1']
+ALLOWED_HOSTS = ['capstonedeployrebuild-production.up.railway.app', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = ['capstonedeployrebuild-production.up.railway.app']
+
+CORS_ALLOWED_ORIGINS = [
+    'capstonedeployrebuild-production.up.railway.app'
+]
 
 
 # Application definition
@@ -57,6 +61,7 @@ INSTALLED_APPS = [
     "Jobs",
     "Customers",
     "mathfilters",
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -68,7 +73,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware"
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware"
 ]
 INTERNAL_IPS = [
     '127.0.0.1',
