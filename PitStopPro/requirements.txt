@@ -47,3 +47,4 @@ wsproto==1.2.0
 yarl==1.9.4
 zipp==3.18.1
 gunicorn==19.7.1
+django-cors-headers==4.3.1
